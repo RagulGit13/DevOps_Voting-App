@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ poll.question }}</title>
+</head>
+<body>
+    <h1>{{ poll.question }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit Vote</button>
+    </form>
+    <a href="{% url 'results' poll.id %}">View Results</a>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results for: {{ poll.question }}</title>
+</head>
+<body>
+    <h1>Results for: {{ poll.question }}</h1>
+    <p>{{ poll.option_1 }}: {{ poll.votes_1 }} votes</p>
+    <p>{{ poll.option_2 }}: {{ poll.votes_2 }} votes</p>
+    <p>{{ poll.option_3 }}: {{ poll.votes_3 }} votes</p>
+    <p>Total Votes: {{ poll.total_votes }}</p>
+    <a href="{% url 'vote' poll.id %}">Go Back to Voting</a>
+</body>
+</html>
